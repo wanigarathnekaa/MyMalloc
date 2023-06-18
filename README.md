@@ -1,5 +1,5 @@
 # MyMalloc Assignment
-### My Implementation of the "malloc"-like built-in memory Allocation Library in C.
+### My Implementation of the "malloc"-like built-in Memory Allocation Library in C.
 
 1. Declare a global array of 25000 bytes.
 2. You must implement a function that is like malloc(). Call it MyMalloc(). Its signature is similar to malloc(). You should also implement MyFree() which has a signature and functionality that are similar to free(). Read the documentation on malloc() and free(). It would be a good idea to use malloc and free before attempting to implement MyMalloc() and MyFree().

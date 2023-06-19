@@ -1,3 +1,8 @@
+/*
+    SCS1214 - Operating Systems I
+    2100071 - K.A.A.Wanigarathne
+*/
+
 #include<stdio.h>
 #include<stdbool.h>
 #define MemorySize 25000
@@ -9,8 +14,10 @@ void *ptr;
 static int init = 0;
 static int free_memory = 0;
 
+//Array of Free Spaces
 char memory[MemorySize];
 
+//Structure of the meta data Block
 struct node{
     struct node *next;
     int size;
@@ -29,7 +36,7 @@ void *MyMalloc(size_t size){
         printf("Cannot Allocate Memory.\n"); //This is to avoid getting junk allocations.
     }
     else if(size > 0){
-        if(init == 0){
+        if(init == 0){ //Allocating Memory for the first time
 
             //Free Block
             head = ptr_free;
@@ -181,7 +188,7 @@ void *MyMalloc(size_t size){
 }
 
 
-
+//My Free Function is for freeing Allocated memory(Which means Adding the Allocted memory blocks in to the array of free memory blocks.)
 void MyFree(void *ptr)
 {
     struct node *block;
